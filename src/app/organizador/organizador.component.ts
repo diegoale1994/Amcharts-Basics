@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from '../models/chart';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-organizador',
@@ -8,10 +9,14 @@ import { Chart } from '../models/chart';
 })
 export class OrganizadorComponent implements OnInit {
 
-  @Input('chartOrder') chartOrder: Chart[];
+  @Input('chartOrders') chartOrders: Chart[];
   constructor() { }
 
   ngOnInit() {
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.chartOrders, event.previousIndex, event.currentIndex);
   }
 
 }

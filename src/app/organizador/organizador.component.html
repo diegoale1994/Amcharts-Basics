@@ -1,1 +1,6 @@
-<p>organizador works!</p>
+<div style="text-align: center;">
+        <span class="display-3">Organiza tus charts</span>
+        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of chartOrders" cdkDrag>{{item.nombre}}</div>
+        </div>
+</div>

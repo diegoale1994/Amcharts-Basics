@@ -13,23 +13,26 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit() {
-    setTimeout(() => {
       this.chartOrder = [
         {
           "posicion": 4,
           "idChart": 667,
+          "nombre": "Grafico de Bala"
         },
         {
           "posicion": 1,
           "idChart": 666,
+          "nombre": "Grafico de Barras"
         },
         {
           "posicion": 3,
           "idChart": 668,
+          "nombre": "Grafico de Radar"
         },
         {
           "posicion": 2,
           "idChart": 669,
+          "nombre": "Grafico de Pie"
         }
       ];
       this.chartOrder.sort(function (a, b) {
@@ -41,6 +44,5 @@ export class AppComponent implements OnInit {
         }
         return 0;
       });
-    }, 50);
   }
 }
