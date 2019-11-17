@@ -1,0 +1,14 @@
+<div [ngSwitch]="idChart">
+    <div *ngSwitchCase="666" id="Chart-{{idChart}}">
+        <app-bar></app-bar>
+    </div>
+    <div *ngSwitchCase="667" id="Chart-{{idChart}}">
+        <app-bullet></app-bullet>
+    </div>
+    <div *ngSwitchCase="668" id="Chart-{{idChart}}">
+        <app-radar></app-radar>
+    </div>
+    <div *ngSwitchCase="669" id="Chart-{{idChart}}">
+        <app-pie></app-pie>
+    </div>
+</div>
